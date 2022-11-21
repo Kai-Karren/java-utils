@@ -1,6 +1,7 @@
 package de.kaikarren.utils;
 
 import java.io.BufferedWriter;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -24,9 +25,17 @@ public class OutputUtils {
 
     }
 
-    public static boolean deleteFileIfExists(String path) throws IOException {
+    public static void deleteFileIfExists(String path) throws IOException {
 
-        return Files.deleteIfExists(Path.of(path));
+        Files.deleteIfExists(Path.of(path));
+
+    }
+
+    public static void writeByteArrayToFile(String filename, byte[] bytes) throws IOException {
+
+        try (FileOutputStream outputStream = new FileOutputStream(filename)) {
+            outputStream.write(bytes);
+        }
 
     }
 
