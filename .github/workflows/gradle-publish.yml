@@ -7,9 +7,13 @@
 
 name: Gradle Package
 
+#on:
+#  release:
+#    types: [created]
+
+# Manually trigger the workflow because the release-based approach is not working currently and needs more testing..
 on:
-  release:
-    types: [published]
+  workflow_dispatch:
 
 jobs:
   build:
