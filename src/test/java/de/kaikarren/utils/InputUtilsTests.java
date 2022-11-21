@@ -39,4 +39,14 @@ class InputUtilsTests {
 
     }
 
+    @Test
+    void getResourceFileAsString() throws IOException {
+
+        var fileAsString = InputUtils.getResourceFileAsString("test.txt");
+
+        assertNotNull(fileAsString);
+
+        assertTrue(fileAsString.startsWith("This is the content"));
+
+    }
 }
