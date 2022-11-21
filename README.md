@@ -1,4 +1,5 @@
-# Java Template
+# Java Utils
 
-Java Template repo using Gradle 7 and Java 11+.
+My personal Java utilities and helper library. Also acts as a test on how to use GitHub Packages.
+
 
