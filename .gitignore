@@ -1,0 +1,9 @@
+build/
+.gradle/
+
+# JetBrains IDE
+.idea/
+
+*.class
+*.log
+*.jar
